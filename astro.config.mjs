@@ -6,5 +6,5 @@ import tailwind from "@astrojs/tailwind";
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://github.com/GerardoEgR',
-  base: 'https://effeta.pages.github.io/',
+  base: 'https://pageEffeta.pages.github.io/',
 });
