@@ -1,9 +1,154 @@
+---
+import 'photoswipe/style.css'
+---
 
-
-<section id="services" class="relative isolate overflow-hidden bg-gray-900 px-6 sm:py-32 lg:px-8">
+<section id="services" class="galery-section relative isolate overflow-hidden bg-gray-900 pb-20 lg:py-32">
+  <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80 w-full" aria-hidden="true">
+    <div class="relative left-[calc(50%-11rem)] aspect-[615/678] w-[36.125rem] translate-x-1/8 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+      style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+    ></div>
+  </div>
   <div class="mx-auto max-w-7xl px-6 lg:px-8 flex flex-wrap place-content-between">
     <div class="mx-auto max-w-xl lg:mx-0">
       <h2 class="text-4xl mb-12 font-bold tracking-tight text-white sm:text-6xl">Galería</h2>
     </div>
+    <div class="lg:mt-20">
+      <div id="gallery" class=" grid grid-cols-3 gap-4 pswp-gallery ">
+        <div class="relative item">
+          <div class="absolute inset-0 flex transition duration-100 ease-in hover:opacity-0">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+          </div>
+          <a
+            href="../../public/images/01.jpeg"
+            data-pswp-width="1875"
+            data-pswp-height="2500"
+            target="_blank"
+          >
+            <img
+              class="border-2 border-slate-400 rounded-md"
+              src="../../public/images/01.jpeg"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="relative item">
+          <div class="absolute inset-0 flex transition duration-100 ease-in hover:opacity-0">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+          </div>
+          <a
+            href="../../public/images/02.jpeg"
+            data-pswp-width="1875"
+            data-pswp-height="2500"
+            target="_blank"
+          >
+            <img
+              class="border-2 border-slate-400 rounded-md"
+              src="../../public/images/02.jpeg"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="relative item">
+          <div class="absolute inset-0 flex transition duration-100 ease-in hover:opacity-0">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+          </div>
+          <a
+            href="../../public/images/03.jpeg"
+            data-pswp-width="1875"
+            data-pswp-height="2500"
+            target="_blank"
+          >
+            <img
+              class="border-2 border-slate-400 rounded-md"
+              src="../../public/images/03.jpeg"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="relative item">
+          <div class="absolute inset-0 flex transition duration-100 ease-in hover:opacity-0">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+          </div>
+          <a
+            href="../../public/images/04.jpeg"
+            data-pswp-width="1875"
+            data-pswp-height="2500"
+            target="_blank"
+          >
+            <img
+              class="border-2 border-slate-400 rounded-md"
+              src="../../public/images/04.jpeg"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="relative item">
+          <div class="absolute inset-0 flex transition duration-100 ease-in hover:opacity-0">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+          </div>
+          <a
+            href="../../public/images/05.jpeg"
+            data-pswp-width="1875"
+            data-pswp-height="2500"
+            target="_blank"
+          >
+            <img
+              class="border-2 border-slate-400 rounded-md"
+              src="../../public/images/05.jpeg"
+              alt=""
+            />
+          </a>
+        </div>
+        <div class="relative item">
+          <div class="absolute inset-0 flex transition duration-100 ease-in hover:opacity-0">
+            <div class="absolute inset-0 bg-black opacity-50"></div>
+          </div>
+          <a
+            href="../../public/images/06.jpeg"
+            data-pswp-width="1875"
+            data-pswp-height="2500"
+            target="_blank"
+          >
+            <img
+              class="border-2 border-slate-400 rounded-md"
+              src="../../public/images/06.jpeg"
+              alt=""
+            />
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+<style>
+  .galery-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(17, 24, 39);
+    background: linear-gradient(0deg, rgba(17, 24, 39, 0) 90%, rgba(17, 24, 39, 1) 100%),
+    linear-gradient(180deg, rgba(17, 24, 39, 0) 80%, rgba(17, 24, 39, 1) 100%);
+  }
+
+  @media (max-width: 640px) {
+    .galery-section::before {
+      display: none; 
+    }
+  }
+</style>
+
+<script>
+  import PhotoSwipeLightbox from 'photoswipe/lightbox'
+
+  const lightbox = new PhotoSwipeLightbox({
+    gallery: '#gallery',
+    children: '.item',
+    pswpModule: () => import('photoswipe'),
+  })
+
+  lightbox.init()
+</script>
