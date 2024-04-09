@@ -1,6 +1,5 @@
 ---
 import 'photoswipe/style.css'
-import { Image } from 'astro:assets'
 ---
 
 <section id="services" class="galery-section relative isolate overflow-hidden bg-gray-900 pb-20 lg:py-32">
@@ -20,16 +19,16 @@ import { Image } from 'astro:assets'
             <div class="absolute inset-0 bg-black opacity-50"></div>
           </div>
           <a
-            href="/images/01.jpg"
+            href="../../public/images/01.jpg"
             data-pswp-width="1875"
             data-pswp-height="2500"
             target="_blank"
           >
-            <Image
+            <img
               class="border-2 border-slate-400 rounded-md"
-              src="/images/01.jpg"
-              width="1875"
-              height="2500"
+              src="../../public/images/01.jpg"
+              width="1600"
+              height="900"
               decoding="async"
               loading="lazy"
               alt="Una descripción de mi imagen."
