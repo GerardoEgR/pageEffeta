@@ -1,5 +1,13 @@
 ---
 import 'photoswipe/style.css'
+import { Image } from 'astro:assets'
+import Uno from '../assets/01.jpeg'
+import Dos from '../assets/02.jpeg'
+import Tres from '../assets/03.jpeg'
+import Cuatro from '../assets/04.jpeg'
+import Cinco from '../assets/05.jpeg'
+import Seis from '../assets/06.jpeg'
+
 ---
 
 <section id="services" class="galery-section relative isolate overflow-hidden bg-gray-900 pb-20 lg:py-32">
@@ -24,9 +32,9 @@ import 'photoswipe/style.css'
             data-pswp-height="2500"
             target="_blank"
           >
-            <img
+            <Image
               class="border-2 border-slate-400 rounded-md"
-              src="../assets/01.jpeg"
+              src={Uno}
               alt=""
             />
           </a>
@@ -36,14 +44,14 @@ import 'photoswipe/style.css'
             <div class="absolute inset-0 bg-black opacity-50"></div>
           </div>
           <a
-            href="../assets//02.jpeg"
+            href="../assets/02.jpeg"
             data-pswp-width="1875"
             data-pswp-height="2500"
             target="_blank"
           >
-            <img
+            <Image
               class="border-2 border-slate-400 rounded-md"
-              src="../assets/02.jpeg"
+              src={Dos}
               alt=""
             />
           </a>
@@ -58,9 +66,9 @@ import 'photoswipe/style.css'
             data-pswp-height="2500"
             target="_blank"
           >
-            <img
+            <Image
               class="border-2 border-slate-400 rounded-md"
-              src="../assets/03.jpeg"
+              src={Tres}
               alt=""
             />
           </a>
@@ -75,9 +83,9 @@ import 'photoswipe/style.css'
             data-pswp-height="2500"
             target="_blank"
           >
-            <img
+            <Image
               class="border-2 border-slate-400 rounded-md"
-              src="../assets/04.jpeg"
+              src={Cuatro}
               alt=""
             />
           </a>
@@ -92,9 +100,9 @@ import 'photoswipe/style.css'
             data-pswp-height="2500"
             target="_blank"
           >
-            <img
+            <Image
               class="border-2 border-slate-400 rounded-md"
-              src="../assets/05.jpeg"
+              src={Cinco}
               alt=""
             />
           </a>
@@ -109,9 +117,9 @@ import 'photoswipe/style.css'
             data-pswp-height="2500"
             target="_blank"
           >
-            <img
+            <Image
               class="border-2 border-slate-400 rounded-md"
-              src="../assets/06.jpeg"
+              src={Seis}
               alt=""
             />
           </a>
